@@ -75,6 +75,7 @@ a {
       font-size: 0.8em;
       margin-top: 10px;
       color: #999;
+      text-transform: uppercase;
   }
 
   .product-price {
@@ -153,4 +154,18 @@ a {
 
 .light-dark {
     color: #777777;
+}
+
+.company-c {
+    display: inline-block;
+    width: 250px;
+    padding: 10px;
+    height: 150px;
+    vertical-align: top;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.company-c img {
+    width: 250px;
 }

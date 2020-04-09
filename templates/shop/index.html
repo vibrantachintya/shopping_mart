@@ -39,10 +39,15 @@
 
     {% endfor %}
 
+    <div class="center margin-gap">
+        <div class="heading">BRANDS</div>
+        <div class="sub-heading">TOP BRANDS OF THE WEEK</div>
+    </div>
+
     <div id="category-container">
 
         {% for com in companies %}
-        <div class="category-c"><img width="250px" src="/media/{{com.logo}}" /></div>
+        <div class="company-c"><img src="/media/{{com.logo}}" /></div>
         {% endfor %}
     </div>
 
