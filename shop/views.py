@@ -1,12 +1,15 @@
 from django.http import HttpResponse
-from .models import Person
+from django.shortcuts import render
+
+from .models import Product, Category, Company
 # Create your views here.
 
 def crud(request):
 
-    objs = Person.objects.all()
+    products = Product.objects.all()
+    categories = Category.objects.all()
+    companies = Company.objects.all()
+    params = {'products': products, 'categories' : categories, 'companies' : companies}
 
-    for obj in objs:
-        print(Person.__str__(obj))
 
-    return HttpResponse("Done")
+    return render(request, 'shop/index.html', params)

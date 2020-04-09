@@ -1,0 +1,96 @@
+<html>
+<head>
+
+    <title> {% block title %} {% endblock %}   </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400&display=swap" rel="stylesheet">
+    <link href="/static/shop/style1.css" rel="stylesheet" />
+</head>
+
+<body>
+    {% load static %}
+    <div class="header-c">
+        <div class="header-title"><img src="{% static 'shop/logo.png' %}" /></div>
+    </div>
+
+
+{% block content %}
+ Body content 
+{% endblock %} 
+<div><div>
+    <div class="center service-c">
+    <div class="service-inner">
+        <div class="service-icon"><span class="fa fa-mobile"></span></div>
+        <div>
+            <h4 class="tt-title" style="color:#191919;" data-c="#191919" data-ac="#2879fe">SUPPORT 24/7</h4>
+              <p style="color: #777777">Contact us 24 hours a day, 7 days a week</p>
+            </div>
+        </div>
+        <div class="service-inner" >
+            <div class="service-icon"><span class="fa fa-exchange"></span></div>
+            <div>
+                <h4 class="tt-title" style="color:#191919;" data-c="#191919" data-ac="#2879fe">30 DAYS RETURN</h4>
+                  <p style="color: #777777">Simply return it within 24 days for an exchange.</p>
+                </div>
+            </div>
+        <div class="service-inner" >
+            <div class="service-icon"><span class="fa fa-truck"></span></div>
+            <div>
+              <h4 style="color:#191919;" data-c="#191919" data-ac="#2879fe">FREE SHIPPING</h4>
+              <p style="color: #777777">Free shipping on all US order or order above $99</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  </div><div class="tt-footer-col tt-color-scheme-03"></div>
+    <div class="center padding-10"><div class="footer-div">
+  <div class="tt-mobile-collapse">
+            <h4 class="tt-collapse-title">CATEGORIES</h4>
+            <div class="tt-collapse-content"><ul class="tt-list"><li><a href="/collections/womens">Women</a></li><li><a href="/collections/mens">Men</a></li><li><a href="/collections/trending">Accessories</a></li><li><a href="/collections/trending">Shoes</a></li><li><a href="/collections/trending">New Arrivals</a></li><li><a href="/collections/trending">Clearence</a></li></ul>
+            </div>
+          </div></div>
+  <div class="footer-div">
+  <div class="tt-mobile-collapse">
+            <h4 class="tt-collapse-title">BUY WITH US</h4>
+            <div class="tt-collapse-content"><ul class="tt-list"><li><a href="/pages/about">About Us</a></li><li><a href="/pages/services">Services</a></li><li><a href="/pages/contact">Contact Us</a></li><li><a href="/pages/faq">FAQs</a></li><li><a href="/pages/privacy-policy">Privacy Policy</a></li><li><a href="/pages/cookie-policy">Cookie Policy</a></li><li><a href="/pages/terms-and-conditions">Terms and Conditions</a></li></ul>
+              
+              
+            </div>
+          </div></div>
+  <div class="footer-div">
+  <div class="tt-mobile-collapse">
+            <h4 class="tt-collapse-title">ABOUT</h4>
+            <div class="light-dark">
+                Buy anything you want from us. The everything store started in 2004 serving customers daily.
+            </div>
+          </div></div>
+  <div class="footer-div">
+  <div class="tt-mobile-collapse">
+            <h4 class="tt-collapse-title">CONTACT US</h4>
+            <div class="light-dark">
+              <address>
+      <p><span>ADDRESS:</span> A/3, Business Park, New City Centre, Noida, UP</p>
+      <p><span>PHONE:</span> +91 9898726254</p>
+      <p><span>HOURS:</span> all week from 9 am to 9 pm</p>
+      <p><span>E-MAIL:</span> info@shoppingmart.com</p>
+  </address>
+              
+            </div>
+  </div>
+    </div>
+  </div>
+    <div class="footer-bottom center">
+      
+        <div> 
+            <a href="/"><img src="{% static 'shop/logo.png' %}" /></a>
+          </div>
+            <div class="margin-top">&copy; ShoppingMart 2020. All Rights Reserved</div>
+          
+   
+  </div></footer>
+  
+
+
+</body>
+</html>

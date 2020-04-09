@@ -1,0 +1,156 @@
+body {
+    font-family: 'Hind';
+    margin: 0px;
+    background: #fafafa;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header-c {
+    background: #fff;
+    padding: 15px 20px;
+}
+
+.header-title img {
+    width: 200px;
+}
+
+.cover-img {
+    width: 100%;
+}
+
+.category-c {
+    display: inline-block;
+    width: 250px;
+    padding: 10px;
+    height: 120px;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-weight: 400;
+    text-align: center;
+    background: #fff;
+}
+
+.margin-gap {
+    margin: 20px 0px;
+}
+
+.center {
+    text-align: center;
+}
+
+#category-container {
+    margin: 20px 0px;
+    text-align: center;
+}
+
+.heading {
+    font-size: 2em;
+}
+
+.sub-heading {
+    font-size: .1.6em;;
+}
+
+.product-c {
+    display: inline-block;
+    width: 280px;
+    height: 500px;
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
+
+.product-c img {
+    width: 280px;
+    height: 350px;
+}
+
+.checked {
+    color: orange;
+  }
+
+  .product-company {
+      font-size: 0.8em;
+      margin-top: 10px;
+      color: #999;
+  }
+
+  .product-price {
+    font-size: 1.6em;
+    margin-top: 5px;
+    font-weight: 400;
+    color: #191919;
+}
+
+.product-name {
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+.service-c {
+    padding: 20px 0px;
+    background: #fff;;
+}
+
+.service-inner {
+    display: inline-block;
+    width: 400px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.service-icon {
+    font-size: 4em;
+    color: #2879fe;
+}
+
+.footer-div {
+    display: inline-block;
+    vertical-align: top;
+    width: 260px;
+    margin-right: 20px;
+    text-align: left;
+}
+
+.footer-div li {
+    list-style: none;
+}
+
+.footer-div li a {
+    color: #777777;
+}
+
+.footer-div ul {
+    padding: 0px;
+}
+
+.footer-bottom {
+    background: #fff;
+    padding: 20px 50px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-flow: row;
+}
+
+.margin-top {
+    margin-top: 10px;
+}
+
+.padding-10 {
+    padding: 10px 0px;
+}
+
+.footer-bottom img {
+    width: 250px;
+}
+
+.light-dark {
+    color: #777777;
+}
