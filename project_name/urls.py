@@ -24,6 +24,7 @@ from shop import views as viewsshop
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', viewsshop.crud, name = "home"),
-    path('about', views.about, name = "about"),
+    path('category/<str:cat>', viewsshop.showcategory, name = "showcategory"),
+    path('brands/<str:comp>', viewsshop.showcompany, name = "showcompany"),
     path('shop/', include('shop.urls'))
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

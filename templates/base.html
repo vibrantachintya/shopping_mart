@@ -4,21 +4,26 @@
     <title> {% block title %} {% endblock %}   </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400&display=swap" rel="stylesheet">
-    <link href="/static/shop/style1.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="/static/shop/style.css" rel="stylesheet" />
+  
 </head>
 
 <body>
     {% load static %}
     <div class="header-c">
-        <div class="header-title"><img src="{% static 'shop/logo.png' %}" /></div>
+      <div class="container">
+        <div class="header-title"><a href="/"><img src="{% static 'shop/logo.png' %}" /></a></div>
+      </div>
     </div>
 
 
 {% block content %}
  Body content 
 {% endblock %} 
-<div><div>
-    <div class="center service-c">
+
+  <div class="center service-c">
+    <div class="container padding-50">
     <div class="service-inner">
         <div class="service-icon"><span class="fa fa-mobile"></span></div>
         <div>
@@ -42,9 +47,8 @@
         </div>
     </div>
   </div>
-  
-  </div><div class="tt-footer-col tt-color-scheme-03"></div>
-    <div class="center padding-10"><div class="footer-div">
+  <div style="background: #f7f8fa;">
+    <div class="center container padding-50"><div class="footer-div">
   <div class="tt-mobile-collapse">
             <h4 class="tt-collapse-title">CATEGORIES</h4>
             <div class="tt-collapse-content"><ul class="tt-list"><li><a href="/collections/womens">Women</a></li><li><a href="/collections/mens">Men</a></li><li><a href="/collections/trending">Accessories</a></li><li><a href="/collections/trending">Shoes</a></li><li><a href="/collections/trending">New Arrivals</a></li><li><a href="/collections/trending">Clearence</a></li></ul>
@@ -80,6 +84,7 @@
   </div>
     </div>
   </div>
+</div>
     <div class="footer-bottom center">
       
         <div> 
@@ -90,7 +95,9 @@
    
   </div></footer>
   
-
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
 </html>

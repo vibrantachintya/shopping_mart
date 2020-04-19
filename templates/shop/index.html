@@ -8,7 +8,7 @@
 <div id="category-container">
 
     {% for cat in categories %}
-    <div class="category-c">{{cat.name}}</div>
+    <a href="/category/{{cat.name}}"><div class="category-c">{{cat.name}}</div></a>
     {% endfor %}
 </div>
 
