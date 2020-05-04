@@ -26,5 +26,6 @@ urlpatterns = [
     path('', viewsshop.crud, name = "home"),
     path('category/<str:cat>', viewsshop.showcategory, name = "showcategory"),
     path('brands/<str:comp>', viewsshop.showcompany, name = "showcompany"),
+    path('product/<str:product_id>', viewsshop.showproduct, name = "showproduct"),
     path('shop/', include('shop.urls'))
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

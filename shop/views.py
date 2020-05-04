@@ -40,3 +40,12 @@ def showcompany(request, comp):
     params = {'products' : products, 'category' : comp, 'categories' : categories, 'companies' : companies}
 
     return render(request, 'shop/category.html', params)
+
+def showproduct(request, product_id):
+
+    product = Product.objects.get(id=product_id)
+    related = Product.objects.exclude(id=product_id).values
+
+    params = {'product' : product, 'related' : related}
+
+    return render(request, 'shop/product.html', params)

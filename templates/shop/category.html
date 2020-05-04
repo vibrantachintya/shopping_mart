@@ -41,7 +41,8 @@
 
         <div>
             {% for prod in products %}
-
+            
+            <a href="/product/{{prod.id}}">
             <div class="product-c">
                 <img src="/media/{{prod.product_image}}" />
                 <div class="product-company">{{prod.company.name}}</div>
@@ -57,6 +58,7 @@
                     <div class="product-price"><span class="fa fa-inr"></span> {{prod.price}}</div>
                 </div>
             </div>
+        </a>
         
             {% endfor %}
         
