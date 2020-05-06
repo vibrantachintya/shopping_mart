@@ -50,6 +50,10 @@
         {% for com in companies %}
         <div class="company-c"><img src="/media/{{com.logo}}" /></div>
         {% endfor %}
+
+        {% for u in users %}
+        <div>{{u.email}}</div>
+        {% endfor %}
     </div>
 
 

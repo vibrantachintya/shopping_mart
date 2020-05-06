@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Your Account | ShoppingMart{% endblock %} 
+{% block content %}
+
+    <div style="background: #f7f8fa; padding: 50px;">
+        {% if user.is_authenticated %}
+             Username : {{user.username}}<br>
+             Email : {{user.email}}
+        {% else %}
+            You're not logged in, <a href="/login">Login</a> or <a href="/signup">Signup</a>
+        {% endif %}
+    
+    </div>
+{% endblock %}

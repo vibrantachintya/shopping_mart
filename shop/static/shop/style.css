@@ -17,6 +17,15 @@ a {
     width: 200px;
 }
 
+.message-c {
+    margin-top: 5px; margin-right: 5px; background-color: #007bff; padding: 5px 15px; border-radius: 5px;
+    cursor: pointer; color: white; position: absolute; right: 0px;
+}
+
+
+#nav-mobile { list-style: none; float: right; margin: 7px 0px 0px 0px; }
+#nav-mobile li { display: inline-block; }
+
 .cover-img {
     width: 100%;
 }
@@ -24,13 +33,13 @@ a {
 .category-c {
     display: inline-block;
     width: 250px;
-    padding: 10px;
-    height: 120px;
     margin-top: 10px;
     margin-right: 10px;
     font-weight: 400;
     text-align: center;
-    background: #fff;
+    border-radius: 10px;
+    background: #f7f8fa;
+    padding: 50px;
 }
 
 .margin-gap {
