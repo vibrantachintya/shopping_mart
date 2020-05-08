@@ -3,6 +3,8 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import logout, authenticate, login
 from django.contrib import messages
 from .forms import NewUserForm
+from shop.models import Order
+from django.http import JsonResponse
 
 def signup(request):
     if request.method == "POST":
@@ -49,4 +51,5 @@ def login_request(request):
     return render(request, "login/login.html", context={"form":form})
 
 def account(request):
-    return render(request, 'login/account.html')
+    orders = Order.objects.all().order_by('-order_id')
+    return render(request, 'login/account.html', {'orders' : orders})

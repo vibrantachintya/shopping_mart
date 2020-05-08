@@ -2,6 +2,54 @@
 {% block title %}{{product.name}} | ShoppingMart{% endblock %} 
 {% block content %} 
 
+<script>
+
+    function addProduct() {
+        const prod = {
+            id: "{{product.id}}",
+            name: "{{product.name}}",
+            price: "{{product.price}}",
+            qty: "1"
+        }
+
+        var prods = [];
+        var exists = 0;
+
+        if(localStorage.getItem('products') === null) {
+            prods[0] = prod;
+        } else {
+            prods = JSON.parse(localStorage.getItem('products'));
+            for(var i = 0; i < prods.length; i++) {
+                if(prods[i].id == prod.id) {
+                    exists = 1;
+                    if(prods[i].qty == 0)
+                    prods[i].qty = 1;
+                }  
+            }
+            if(exists == 0)
+            prods[prods.length] = prod; 
+        }
+
+        localStorage.setItem('products', JSON.stringify(prods));
+        window.location = '/order/';
+
+    }
+
+
+</script>
+
+<style>
+    #add-cart {
+        background: #2879fe; cursor: pointer; display: flex; color: white; border-radius: 5px; padding: 10px 0px; justify-content: center; margin-right: 10px; width: 40%;
+    }
+
+    #add-cart:hover {
+        background: #f7f8fa; cursor: pointer; display: flex; color: #2879fe; border-radius: 5px; padding: 10px 0px; justify-content: center; margin-right: 10px; width: 40%;  
+    }
+
+
+</style>
+
 <div style="background: #f7f8fa; padding: 5px 0px;">
 
     <div class="container">
@@ -24,11 +72,8 @@
         <div>Tax Included</div>
 
         <div style="display: flex; flex-direction: row; margin: 10px 0px;">
-        <div style="background: #2879fe; display: flex; color: white; border-radius: 5px; padding: 10px 0px; justify-content: center; margin-right: 10px; width: 40%;">
+        <div id="add-cart" onclick="addProduct();">
             Add to Cart
-        </div>
-        <div style="background: #f8dc68; display: flex; color: #191919; border-radius: 5px; padding: 10px 0px; justify-content: center; width: 40%;">
-            Buy Now
         </div>
         </div>
 

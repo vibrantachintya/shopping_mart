@@ -1,8 +1,9 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth.models import User
+from .forms_order import OrderForm
 
-from .models import Product, Category, Company
+from .models import Product, Category, Company, Order
 # Create your views here.
 
 def crud(request):
@@ -50,3 +51,21 @@ def showproduct(request, product_id):
     params = {'product' : product, 'related' : related}
 
     return render(request, 'shop/product.html', params)
+
+def order(request):
+    if request.method == "POST":
+        form = OrderForm(request.POST)
+        if form.is_valid(): # All validation rules pass
+            order = form.save(commit=False)
+            order.user = request.user
+            order.status = 'PLACED'
+            order.order_id = "OrderId" + str(form.cleaned_data.get('order_id'))
+            order.save()
+            params = {'submitted' : '1'}
+            return render(request, 'shop/order.html', params)    
+    else:
+        form = OrderForm()
+
+    return render(request, 'shop/order.html', {
+        'form': form, 'submitted' : '0',
+    })

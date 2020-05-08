@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -39,3 +40,21 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+class Order(models.Model):
+    
+    order_id = models.CharField(max_length=200)
+    products_id = models.CharField(max_length=200)
+    user = models.ForeignKey(User, on_delete = models.CASCADE, blank = True)
+    total = models.IntegerField()
+    discount = models.IntegerField()
+    status = models.CharField(max_length=100, blank=True, null=True)
+    tax = models.IntegerField()
+    price = models.IntegerField()
+    address = models.CharField(max_length=1000)
+    pincode = models.IntegerField()
+    created_at = models.DateField(auto_now_add=True)
+    updated_at = models.DateField(auto_now=True)
+    
+    def __str__(self):
+        return self.order_id
