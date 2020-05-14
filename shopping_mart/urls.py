@@ -1,4 +1,4 @@
-"""project_name URL Configuration
+"""shopping_mart URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -32,5 +32,6 @@ urlpatterns = [
     path('login/', views.login_request, name = "login"),
     path('account/', views.account, name = "account"),
     path('order/', viewsshop.order, name = "order"),
+    path('api/', include('api.urls')),
     path('shop/', include('shop.urls'))
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
