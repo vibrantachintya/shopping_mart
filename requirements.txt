@@ -9,7 +9,6 @@ djangorestframework==3.11.0
 djangotoolbox==1.8.0
 idna==2.9
 numpy==1.18.2
-Pillow==7.1.1
 pycodestyle==2.5.0
 pymongo==3.10.1
 PyQRCode==1.2.1
